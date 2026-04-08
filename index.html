@@ -1,0 +1,1470 @@
+<!-- 
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  LOCAL BUSINESS WEBSITE TEMPLATE                            ║
+  ║  Built by Ryan Conwell — Powered by Claude                  ║
+  ║                                                              ║
+  ║  SETUP: Find and replace all {{VARIABLE}} placeholders      ║
+  ║  See CLAUDE.md for variable reference                        ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- SEO: Title 55 chars, keyword-first, Utah-specific -->
+  <title>{{BRAND_NAME}} | Premium Roof Replacement & Storm Repair</title>
+  <meta name="description" content="Utah's premium roofing contractor. Expert roof replacement, storm damage repair & free inspections across Salt Lake City, Park City, {{CITY}} & the Wasatch Front. Call {{PHONE}}." />
+
+  <!-- Geo meta tags -->
+  <meta name="geo.region" content="US-UT" />
+  <meta name="geo.placename" content="{{CITY}}, Utah" />
+  <meta name="geo.position" content="{{LAT}};{{LNG}}" />
+  <meta name="ICBM" content="{{LAT}}, {{LNG}}" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.{{DOMAIN}}/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{BRAND_NAME}} | Premium Roof Replacement & Storm Repair" />
+  <meta property="og:description" content="Expert roof replacement, storm damage repair & free inspections across Utah's Wasatch Front. {{CITY}} based, serving 44 communities. Call {{PHONE}}." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.{{DOMAIN}}/" />
+  <meta property="og:image" content="https://www.{{DOMAIN}}/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="{{BRAND_NAME}}" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{BRAND_NAME}} | Premium Roof Replacement & Storm Repair" />
+  <meta name="twitter:description" content="Expert roof replacement, storm damage repair & free inspections across Utah's Wasatch Front. Call {{PHONE}}." />
+  <meta name="twitter:image" content="https://www.{{DOMAIN}}/images/og-image.jpg" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- Theme color (browser chrome) -->
+  <meta name="theme-color" content="#0B4060" />
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Preload hero image for LCP -->
+  <link rel="preload" as="image" href="/images/photos/hero-main.webp" fetchpriority="high" />
+
+  <!-- DNS prefetch for external resources -->
+  <!-- Images now served locally from /images/photos/ -->
+  <link rel="dns-prefetch" href="//formspree.io" />
+  <link rel="dns-prefetch" href="//calendar.app.google" />
+
+  <!-- GTM: Add Google Tag Manager snippet here after client setup -->
+
+  <!-- GSC verification — replace with real token from Search Console -->
+  <!-- GSC: Add google-site-verification meta tag after client verifies Search Console -->
+
+  <!-- llms.txt: AI engine discoverability — create /llms.txt at site root -->
+
+  <!-- LocalBusiness + RoofingContractor Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+    "name": "{{BRAND_NAME}}",
+    "alternateName": "{{BRAND_NAME}}",
+    "description": "{{SCHEMA_DESCRIPTION}}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.{{DOMAIN}}/logo.png",
+      "width": 400,
+      "height": 120
+    },
+    "image": "/images/photos/hero-main.webp",
+    "url": "https://www.{{DOMAIN}}/",
+    "telephone": "{{PHONE_E164}}",
+    "email": "sales@{{DOMAIN}}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ADDRESS}}",
+      "addressLocality": "{{CITY}}",
+      "addressRegion": "{{STATE}}",
+      "postalCode": "{{ZIP}}",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": {{LAT}},
+      "longitude": {{LNG}}
+    },
+    "areaServed": [
+      {"@type": "City", "name": "{{CITY}}", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Park City", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Salt Lake City", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Sandy", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Draper", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "West Jordan", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "South Jordan", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Provo", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Orem", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Lehi", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Murray", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Midway", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Bountiful", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Layton", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Riverton", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Herriman", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Taylorsville", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "West Valley City", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Ogden", "containedInPlace": {"@type": "State", "name": "Utah"}},
+      {"@type": "City", "name": "Cottonwood Heights", "containedInPlace": {"@type": "State", "name": "Utah"}}
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Roofing & Restoration Services",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Residential Roofing","description":"New roofs, replacements, and repairs for Utah homes. Built for Wasatch Front snowloads and freeze-thaw cycles."}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Commercial Roofing","description":"TPO, EPDM, and metal flat roofing systems for Utah businesses and multifamily properties."}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Storm Damage Restoration","description":"Utah hail and wind damage specialists. Full insurance claim navigation."}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Water & Fire Restoration","description":"Emergency water, fire, and flood restoration across the Wasatch Front."}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Solar Installation","description":"Roof-integrated solar systems maximizing Utah's 300+ annual sunny days."}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"General Contracting","description":"Kitchen remodels, bathroom renovations, additions, and full-home renovations."}}
+      ]
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "{{PHONE_E164}}",
+      "contactType": "customer service",
+      "areaServed": "{{STATE}}",
+      "availableLanguage": "English"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "{{BRAND_NAME}}",
+      "url": "https://www.{{DOMAIN}}/"
+    },
+    "sameAs": [
+      "{{FACEBOOK_URL}}",
+      "https://www.instagram.com/{{DOMAIN_SHORT}}",
+      "{{YELP_URL}}",
+      "{{BBB_URL}}",
+      "https://www.google.com/maps/place/{{GOOGLE_MAPS_PLACE_NAME}}/@{{LAT}},{{LNG}},17z/"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "19",
+      "bestRating": "5"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Coach Sis"},
+        "reviewBody": "{{OWNER_FIRST_NAME}} was top notch. He made everything easy and checked in with me along the way for a total roof replacement I needed done. I cant say enough about the job they did for my moms house. She needed a new roof badly. Thank you for being a honest and fair roofing contractor who lived up to every inch of what was promised."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Sam Thornton"},
+        "reviewBody": "Working with {{OWNER_FIRST_NAME}} was a breeze. He was knowledgeable and provided me with excellent advice on the best options for our new roof. He even took the time to look into the possibility of submitting an insurance claim but was honest in his assessment."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "author": {"@type": "Person", "name": "Rick Rekoutis"},
+        "reviewBody": "{{OWNER_FIRST_NAME}} is great to work with. He has replaced two roofs for me and does top notch work. He should be your first call if you need a roofer."
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema — mirrors FAQ section below for AI Overviews -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does {{BRAND_NAME}} work with insurance companies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. {{BRAND_NAME}} specializes in insurance claim navigation. We document all storm and hail damage, work directly with your adjuster, and help ensure you receive the full payout. We've helped hundreds of Utah homeowners get their claims approved."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer free roof inspections in Salt Lake City?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We offer 100% free, no-obligation roof inspections across the entire Salt Lake Valley and Wasatch Front — from Bountiful and Layton in the north to Provo and Payson in the south. Call {{PHONE}} or schedule online."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas does {{BRAND_NAME}} serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve 40+ communities across the full Wasatch Front including Salt Lake City, West Jordan, West Valley City, Sandy, Draper, South Jordan, Murray, Taylorsville, Millcreek, Cottonwood Heights, Bountiful, Layton, Lehi, Orem, Provo, and more. Headquartered in {{CITY}}. "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What warranty does {{BRAND_NAME}} offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every job is backed by a 10‑year workmanship warranty plus lifetime material warranties from our manufacturer partners. If any issue with our work arises, we return and fix it at no charge."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is {{BRAND_NAME}} licensed and insured?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. {{LEGAL_NAME}} is fully licensed and insured in Utah (DOPL License {{LICENSE_NUMBER}}). We carry comprehensive general liability insurance and workers' compensation coverage on every project."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer financing for roofing projects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We partner with Wisetack to offer flexible financing on all roofing and restoration projects. Get pre-qualified in minutes with no credit impact. Loans from $500 to $100,000, terms up to 60 months, no prepayment penalties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you do emergency storm damage repair in Utah?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We provide rapid emergency response for storm, hail, wind, and snow damage across the Wasatch Front. Call {{PHONE}} for urgent roof tarping, leak mitigation, and damage assessment."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{BRAND_NAME}}",
+    "url": "https://www.{{DOMAIN}}/",
+    "description": "Utah's trusted roofing and restoration contractor serving 40+ Wasatch Front communities. Free inspections, storm damage, solar, and general contracting.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{BRAND_NAME}}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.{{DOMAIN}}/logo.png"
+      }
+    },
+
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/global.css">
+
+  <style>
+    /* ─── INDEX-SPECIFIC STYLES ─── */
+    /* Variables, reset, nav, buttons, section defaults, sticky-call, and
+       responsive nav rules are in global.css — loaded via <link> above. */
+
+    /* ─── HERO ─── */
+    .hero { min-height: 100vh; min-height: 100dvh; position: relative; display: flex; align-items: center; overflow: hidden; background: var(--navy); padding-top: calc(100px + env(safe-area-inset-top, 0px)); }
+    .hero-img { position: absolute; inset: 0; }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; opacity: 0.5; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(11,64,96,0.78), rgba(11,64,96,0.50)); }
+    .hero-content { position: relative; z-index: 2; padding: 80px 5% 100px; width: 100%; max-width: 1100px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--navy); font-family: 'Archivo Black', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 7px 16px; margin-bottom: 20px; font-weight: 700; border-radius: 2px; }
+    .hero-brand { font-family: 'Archivo Black', sans-serif; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 8px; display: block; }
+    .hero h1 { font-family: 'Archivo Black', sans-serif; font-size: clamp(40px, 6vw, 72px); font-weight: 700; color: var(--white); line-height: 1.04; text-transform: uppercase; margin-bottom: 18px; }
+    .hero h1 span { color: var(--gold); }
+    .hero p { font-size: 17px; color: rgba(255,255,255,0.85); line-height: 1.7; max-width: 540px; margin-bottom: 0; }
+    .hero-layout { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,1fr); gap: 40px; margin-top: 28px; align-items: flex-start; }
+    .hero-left { display: flex; flex-direction: column; gap: 22px; padding-top: 4px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn-primary { background: var(--gold); color: var(--navy); padding: 16px 34px; font-family: 'Archivo Black', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border-radius: 2px; display: inline-flex; align-items: center; justify-content: center; transition: all 0.2s; border: 2px solid var(--gold); box-shadow: 0 8px 28px rgba(225,185,105,0.35); animation: pulse-cta 2.4s infinite; }
+    @keyframes pulse-cta { 0%,100%{transform:translateY(0) scale(1);} 50%{transform:translateY(-2px) scale(1.02);} }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(225,185,105,0.45); animation: none; }
+    .btn-secondary { background: transparent; color: var(--white); padding: 16px 34px; font-family: 'Archivo Black', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border-radius: 2px; border: 2px solid rgba(255,255,255,0.45); display: inline-flex; align-items: center; justify-content: center; transition: all 0.2s; }
+    .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+    .phone-cta { gap: 8px; }
+    .hero-points { list-style: none; padding: 0; margin: 0; font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.65; }
+    .hero-points li { padding-left: 22px; position: relative; }
+    .hero-points li::before { content: '\2713'; position: absolute; left: 0; color: var(--gold); font-weight: 700; font-size: 15px; }
+    .hero-points li + li { margin-top: 8px; }
+    .hero-form-card { background: rgba(250,249,245,0.99); border-radius: 6px; padding: 28px; border-top: 4px solid var(--gold); box-shadow: 0 16px 48px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.05); }
+    .hero-form-card h2 { font-family: 'Archivo Black', sans-serif; font-size: 18px; text-transform: uppercase; color: var(--navy); margin-bottom: 6px; letter-spacing: 0.5px; }
+    .hero-form-card p { font-size: 13px; color: var(--gray); margin-bottom: 18px; line-height: 1.5; }
+    .hero-form .form-row { margin-bottom: 14px; }
+    .hero-form .form-row.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .hero-form input, .hero-form select { width: 100%; padding: 12px 14px; border-radius: 3px; border: 2px solid var(--light-gray); font-size: 15px; font-family: 'Archivo', sans-serif; color: var(--dark); background: var(--white); transition: border-color 0.2s; -webkit-appearance: none; }
+    .hero-form input:focus, .hero-form select:focus { border-color: var(--navy); outline: none; box-shadow: 0 0 0 3px rgba(11,64,96,0.1); }
+    .hero-form input::placeholder { color: #999; font-family: 'Archivo', sans-serif; }
+    .hero-submit { width: 100%; margin-top: 6px; cursor: pointer; min-height: 48px; padding: 14px 24px; font-size: 14px; letter-spacing: 1.2px; animation: none; box-shadow: 0 4px 16px rgba(225,185,105,0.3); border-radius: 3px; }
+    .hero-submit:hover { animation: none; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(225,185,105,0.4); }
+    .form-note { font-size: 11px; color: #999; margin-top: 10px; line-height: 1.4; text-align: center; }
+    @media (max-width: 900px) {
+      .hero { min-height: auto; align-items: flex-start; }
+      .hero-content { padding: 28px 5% 48px; }
+      .hero-layout { grid-template-columns: 1fr; gap: 28px; }
+      .hero-actions { flex-direction: column; gap: 10px; }
+      .hero-actions .btn-primary, .hero-actions .btn-secondary { width: 100%; text-align: center; padding: 18px 24px; min-height: 54px; }
+      .nav-cta { width: 100% !important; text-align: center; justify-content: center; }
+      .hero h1 { margin-bottom: 14px; }
+      .hero p { font-size: 15px; margin-bottom: 0; }
+      .hero-badge { margin-bottom: 16px; }
+      /* Prevent iOS zoom on input focus — keep at 16px minimum */
+      .hero-form input, .hero-form select { font-size: 16px; }
+    }
+    @media (max-width: 600px) {
+      .hero-content { padding: 24px 5% 36px; }
+      .hero-layout { gap: 20px; }
+      .hero-form-card { padding: 22px 18px; }
+      .hero-form-card h2 { font-size: 16px; }
+      .hero h1 { font-size: clamp(28px, 8vw, 40px); margin-bottom: 10px; }
+      .hero-brand { font-size: 12px; letter-spacing: 2px; margin-bottom: 4px; }
+      .hero-badge { font-size: 10px; padding: 6px 12px; margin-bottom: 12px; }
+      .hero p { font-size: 14px; line-height: 1.6; }
+      .hero-points { font-size: 13px; }
+      .hero-points li + li { margin-top: 6px; }
+    }
+    @media (max-height: 700px) and (max-width: 900px) {
+      .hero-content { padding: 16px 5% 28px; }
+      .hero-layout { gap: 16px; }
+      .hero-form-card { padding: 18px 16px; }
+      .hero-form-card p { margin-bottom: 12px; }
+      .hero-form .form-row { margin-bottom: 10px; }
+      .hero-form input, .hero-form select { padding: 10px 12px; font-size: 16px; }
+      .hero-submit { min-height: 44px; padding: 12px 20px; }
+      .hero-badge { margin-bottom: 8px; }
+      .hero h1 { margin-bottom: 8px; }
+    }
+
+    /* ─── TRUST BAR ─── */
+    .trust-bar { background: var(--off-white); border-bottom: 1px solid var(--light-gray); padding: 16px 5%; display: flex; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--navy); font-weight: 600; white-space: nowrap; }
+    .trust-icon { width: 32px; height: 32px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .trust-icon svg { width: 16px; height: 16px; }
+
+    /* ─── SERVICES ─── */
+    #services { background: var(--white); }
+    .services-header { text-align: center; margin-bottom: 60px; }
+    .services-header .section-sub { margin: 0 auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--light-gray); }
+    .service-card { background: var(--white); position: relative; overflow: hidden; transition: all 0.3s; }
+    .service-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 3px; background: var(--gold); transition: width 0.4s ease; }
+    .service-card:hover::after { width: 100%; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(11,64,96,0.10); }
+    .service-card-img { width: 100%; height: 200px; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .service-card:hover .service-card-img { transform: scale(1.05); }
+    .service-card-body { padding: 28px 32px 36px; }
+    .service-icon { width: 48px; height: 48px; background: var(--navy); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; border-radius: 2px; transition: transform 0.3s; margin-top: -36px; position: relative; z-index: 2; box-shadow: 0 4px 12px rgba(11,64,96,0.25); }
+    .service-icon svg { width: 24px; height: 24px; }
+    .service-card h3 { font-family: 'Archivo Black', sans-serif; font-size: 20px; font-weight: 600; color: var(--navy); text-transform: uppercase; margin-bottom: 10px; }
+    .service-card p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+    .service-card-link { display: block; text-decoration: none; color: inherit; }
+    .service-card-link:hover .service-card { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(11,64,96,0.25); }
+    .service-card-link:hover .service-icon { transform: scale(1.1); }
+    .service-card-link:hover .service-card::after { width: 100%; }
+
+    /* ─── GALLERY ─── */
+    #gallery { background: var(--navy); padding-bottom: 60px; }
+    #gallery .section-title { color: var(--white); }
+    .gallery-header { margin-bottom: 40px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 260px 260px; gap: 4px; }
+    .gallery-item { overflow: hidden; position: relative; }
+    .gallery-item:first-child { grid-column: 1/2; grid-row: 1/3; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.5s ease; display: block; }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(11,64,96,0.6) 0%, transparent 50%); pointer-events: none; }
+    .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 14px; z-index: 2; color: #fff; }
+    .gallery-caption strong { display: block; font-size: 0.95rem; font-weight: 700; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+    .gallery-caption span { display: block; font-size: 0.78rem; opacity: 0.9; margin-top: 2px; text-shadow: 0 1px 2px rgba(0,0,0,0.4); }
+    @media (hover: none) {
+      /* captions always visible on mobile */
+    }
+
+    /* ─── WHY ─── */
+    #why { background: var(--off-white); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .why-img { position: relative; }
+    .why-img img { width: 100%; height: 500px; object-fit: cover; display: block; }
+    .why-badge { position: absolute; bottom: -20px; right: -20px; background: var(--navy); border: 3px solid var(--gold); padding: 20px 24px; text-align: center; }
+    .why-badge .num { font-family: 'Archivo Black', sans-serif; font-size: 42px; font-weight: 700; color: var(--gold); line-height: 1; }
+    .why-badge .lbl { font-size: 12px; color: var(--white); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+    .why-points { display: flex; flex-direction: column; gap: 28px; margin-top: 32px; }
+    .why-point { display: flex; gap: 20px; align-items: flex-start; }
+    .why-num { font-family: 'Archivo Black', sans-serif; font-size: 40px; font-weight: 700; color: var(--gold); opacity: 0.35; line-height: 1; flex-shrink: 0; width: 36px; }
+    .why-point h4 { font-family: 'Archivo Black', sans-serif; font-size: 18px; text-transform: uppercase; color: var(--navy); margin-bottom: 5px; }
+    .why-point p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+    /* ─── STATS COUNTER ─── */
+    .stats-section { background: var(--navy); padding: 80px 5%; position: relative; overflow: hidden; }
+    .stats-section::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(11,64,96,1) 0%, rgba(9,53,82,0.95) 100%); }
+    .stats-grid { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    .stat-item { padding: 20px; }
+    .stat-number { font-family: 'Archivo Black', sans-serif; font-size: clamp(42px, 5vw, 64px); color: var(--gold); line-height: 1; margin-bottom: 8px; }
+    .stat-number .stat-suffix { font-size: 0.5em; vertical-align: super; color: var(--gold); }
+    .stat-label { font-family: 'Archivo Black', sans-serif; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--white); margin-bottom: 8px; }
+    .stat-desc { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+    .stats-divider { width: 1px; background: rgba(225,185,105,0.2); }
+    @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
+    @media (max-width: 480px) { .stats-grid { grid-template-columns: 1fr; gap: 24px; } }
+
+    /* ─── FULL-WIDTH DRONE BREAK ─── */
+    /* ─── FINANCING SECTION ─── */
+    .financing-section { background: var(--off-white); padding: 100px 5%; }
+    .financing-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 300px; gap: 60px; align-items: center; }
+    .financing-text p { font-size: 17px; line-height: 1.7; color: var(--gray); margin-top: 16px; }
+    .financing-features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+    .financing-feat { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: var(--navy); }
+    .financing-badge { display: flex; justify-content: center; }
+    .financing-badge-inner { background: var(--navy); border: 3px solid var(--gold); padding: 40px 32px; text-align: center; max-width: 260px; }
+    .financing-badge-text { font-size: 13px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 2px; margin-top: 20px; }
+    .financing-badge-brand { font-family: 'Archivo Black', sans-serif; font-size: 28px; color: var(--gold); margin: 4px 0 12px; }
+    .financing-badge-sub { font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.5; }
+    @media (max-width: 768px) { .financing-inner { grid-template-columns: 1fr; gap: 40px; } .financing-features { grid-template-columns: 1fr; } .financing-badge-inner { max-width: 100%; } }
+
+    .drone-break { position: relative; height: 400px; overflow: hidden; }
+    .drone-break img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block; filter: brightness(0.85); }
+    .drone-break-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(11,64,96,0.7), transparent 60%); display: flex; align-items: center; padding: 0 5%; }
+    .drone-break-text { max-width: 500px; }
+    .drone-break-text h2 { font-family: 'Archivo Black', sans-serif; font-size: clamp(28px, 3.5vw, 44px); color: var(--white); text-transform: uppercase; line-height: 1.1; margin-bottom: 16px; }
+    .drone-break-text p { font-size: 16px; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 24px; }
+    @media (max-width: 768px) { .drone-break { height: 300px; } .drone-break-overlay { background: linear-gradient(to top, rgba(11,64,96,0.8), transparent); align-items: flex-end; padding-bottom: 32px; } }
+
+    /* ─── CTA ARROW ─── */
+    .btn-arrow { display: inline-flex; align-items: center; gap: 10px; }
+    .btn-arrow::after { content: '→'; font-size: 1.1em; transition: transform 0.2s; }
+    .btn-arrow:hover::after { transform: translateX(4px); }
+
+    /* ─── VIDEO SHOWCASE ─── */
+    #video-showcase { background: var(--white); padding: 0 0 80px; position: relative; }
+    .video-curve { width: 100%; line-height: 0; margin-bottom: 0; }
+    .video-curve svg { width: 100%; height: 80px; display: block; }
+    .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; max-width: 1200px; margin: 0 auto; padding: 40px 24px 0; }
+    .video-player video { width: 100%; border-radius: 8px; display: block; box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+    .video-headline h2 { font-family: 'Archivo Black', sans-serif; font-size: clamp(24px, 3vw, 38px); text-transform: uppercase; color: var(--navy); line-height: 1.25; }
+    .video-headline .gold { color: var(--gold); }
+    @media (max-width: 768px) {
+      .video-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .video-headline h2 { font-size: 22px; }
+    }
+
+    /* ─── TESTIMONIALS ─── */
+    #testimonials { background: var(--white); }
+    .testimonials-header { text-align: center; margin-bottom: 56px; }
+    .testimonials-header .section-sub { margin: 0 auto; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; }
+    .testimonial-card { background: var(--off-white); border: 1px solid var(--light-gray); border-top: 3px solid var(--gold); padding: 32px; }
+    .testimonial-stars { display: flex; gap: 4px; margin-bottom: 16px; }
+    .testimonial-stars svg { width: 18px; height: 18px; fill: var(--gold); }
+    .testimonial-text { font-size: 15px; color: var(--dark); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .testimonial-author { font-family: 'Archivo Black', sans-serif; font-size: 14px; color: var(--navy); text-transform: uppercase; letter-spacing: 1px; }
+    .testimonial-city { font-size: 13px; color: var(--gray); margin-top: 2px; }
+
+    /* ─── AREAS — Full Wasatch Front ─── */
+    #areas { background: var(--navy); }
+    #areas .section-title { color: var(--white); }
+    #areas .section-sub { color: rgba(255,255,255,0.6); }
+    .areas-header { margin-bottom: 48px; }
+    .county-group { margin-top: 32px; }
+    .county-label { font-family: 'Archivo Black', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(225,185,105,0.2); }
+    .areas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(175px, 1fr)); gap: 2px; background: rgba(255,255,255,0.05); }
+    .area-chip { background: rgba(255,255,255,0.04); padding: 14px 20px; color: rgba(255,255,255,0.75); font-size: 14px; display: flex; align-items: center; gap: 10px; transition: all 0.2s; text-decoration: none; }
+    .area-chip::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+    .area-chip:hover { background: rgba(225,185,105,0.1); color: var(--white); }
+    
+
+    /* ─── CTA BANNER ─── */
+    #cta { background: var(--gold); padding: 80px 5%; text-align: center; }
+    #cta h2 { font-family: 'Archivo Black', sans-serif; font-size: clamp(32px,5vw,60px); font-weight: 700; color: var(--navy); text-transform: uppercase; margin-bottom: 16px; }
+    #cta p { font-size: 18px; color: rgba(11,64,96,0.7); margin-bottom: 36px; }
+    .btn-navy { background: var(--navy); color: var(--white); padding: 18px 40px; font-family: 'Archivo Black', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border-radius: 2px; display: inline-block; transition: all 0.2s; margin: 0 8px 12px; }
+    .btn-navy:hover { background: var(--navy-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(11,64,96,0.3); }
+    .btn-outline-navy { background: transparent; color: var(--navy); padding: 18px 40px; font-family: 'Archivo Black', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border-radius: 2px; border: 2px solid var(--navy); display: inline-block; transition: all 0.2s; margin: 0 8px 12px; }
+    .btn-outline-navy:hover { background: rgba(11,64,96,0.08); }
+
+    /* ─── FAQ ─── */
+    #faq { background: var(--off-white); }
+    .faq-intro { text-align: center; margin-bottom: 48px; }
+    .faq-intro .section-sub { margin: 0 auto; }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-width: 1100px; margin: 0 auto; border: 1px solid var(--light-gray); }
+    .faq-item { padding: 28px 32px; border-bottom: 1px solid var(--light-gray); border-right: 1px solid var(--light-gray); background: var(--white); }
+    .faq-item:nth-child(even) { border-right: none; }
+    .faq-item:nth-last-child(-n+2) { border-bottom: none; }
+    .faq-q { font-family: 'Archivo Black', sans-serif; font-size: 16px; font-weight: 600; color: var(--navy); text-transform: uppercase; margin-bottom: 0; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; line-height: 1.3; }
+    .faq-toggle { font-size: 24px; color: var(--gold); flex-shrink: 0; line-height: 1; transition: transform 0.3s; }
+    .faq-item.open .faq-toggle { transform: rotate(45deg); }
+    .faq-a { font-size: 14px; color: var(--gray); line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, margin-top 0.35s ease; }
+    .faq-item.open .faq-a { max-height: 250px; margin-top: 12px; }
+
+    /* ─── CONTACT ─── */
+    #contact { background: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .contact-detail { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 28px; }
+    .contact-detail-icon { width: 44px; height: 44px; background: var(--navy); display: flex; align-items: center; justify-content: center; border-radius: 2px; flex-shrink: 0; }
+    .contact-detail-icon svg { width: 20px; height: 20px; }
+    .contact-detail h5 { font-family: 'Archivo Black', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gray); margin-bottom: 4px; }
+    .contact-detail a, .contact-detail p { font-size: 16px; color: var(--navy); font-weight: 600; text-decoration: none; }
+    .contact-detail a:hover { color: var(--gold); }
+    .contact-form { background: var(--off-white); padding: 40px; border-top: 3px solid var(--gold); }
+    .contact-form h3 { font-family: 'Archivo Black', sans-serif; font-size: 24px; color: var(--navy); text-transform: uppercase; margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--navy); margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border: 2px solid var(--light-gray); background: var(--white); font-family: 'Archivo', sans-serif; font-size: 16px; color: var(--dark); border-radius: 2px; outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--navy); }
+    .form-group textarea { height: 90px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-submit { width: 100%; background: var(--navy); color: var(--white); border: none; padding: 16px; font-family: 'Archivo Black', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; border-radius: 2px; transition: background 0.2s; margin-top: 8px; }
+    .form-submit:hover { background: var(--navy-mid); }
+
+    /* ─── FOOTER ─── */
+    footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 60px 5% 30px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand img { height: 44px; margin-bottom: 16px; filter: brightness(0) invert(1); display: block; }
+    .footer-brand p { font-size: 14px; line-height: 1.7; }
+    .footer-col h4 { font-family: 'Archivo Black', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 16px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { font-size: 14px; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; }
+    .footer-bottom a { color: var(--gold); text-decoration: none; }
+    .footer-social { display: flex; gap: 14px; margin-top: 18px; }
+    .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.55); transition: background 0.2s, color 0.2s; }
+    .footer-social a:hover { background: var(--gold); color: var(--dark); }
+    .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
+    .footer-map { margin-top: 20px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
+    .footer-map iframe { width: 100%; height: 200px; border: 0; filter: grayscale(0.3); }
+
+    /* ─── REVEAL ANIMATION ─── */
+    /* Default: visible (no-JS fallback, file:// preview, etc.) */
+    .reveal { opacity: 1; transform: translateY(0); }
+    /* Only animate when JS confirms it's safe */
+    .js-ready .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .js-ready .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── RESPONSIVE ─── */
+    /* ─── INDEX RESPONSIVE (nav/sticky/body-padding handled by global.css) ─── */
+    @media (max-width: 900px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .gallery-item { height: 200px; }
+      .gallery-item:first-child { grid-column: 1/3; height: 240px; }
+      .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .why-badge { right: 0; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .faq-grid { grid-template-columns: 1fr; border: none; }
+      .faq-item { border-right: none !important; border: none; border-bottom: 1px solid var(--light-gray) !important; }
+      .faq-item:last-child { border-bottom: none !important; }
+      /* Mobile contact form improvements */
+      .contact-form { padding: 28px 20px; }
+      .form-group input, .form-group select, .form-group textarea { padding: 14px 16px; font-size: 16px; }
+      .form-submit { padding: 18px; font-size: 17px; min-height: 52px; }
+      /* Mobile areas grid — bigger touch targets */
+      .areas-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+      .area-chip { padding: 16px 18px; font-size: 15px; min-height: 48px; }
+      /* Footer map constraint */
+      .footer-map iframe { max-height: 240px; }
+      /* Testimonial cards mobile */
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .testimonial-text { font-size: 16px; }
+      /* Services grid — 2 columns on tablets */
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-card-img { height: 180px; }
+      .service-card-body { padding: 24px 24px 28px; }
+    }
+    @media (max-width: 600px) {
+      .trust-bar { gap: 10px; padding: 20px 8%; flex-direction: column; align-items: flex-start; justify-content: flex-start; }
+      .trust-item { white-space: normal; font-size: 13px; gap: 10px; flex: 0 1 auto; }
+      .trust-icon { width: 28px; height: 28px; }
+      .trust-icon svg { width: 14px; height: 14px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      /* Services grid — single column on phones */
+      .services-grid { grid-template-columns: 1fr; }
+      /* Small screen gallery — single column */
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item:first-child { grid-column: 1; height: 220px; }
+      .gallery-item { height: 180px; }
+      /* Small screen areas grid */
+      .areas-grid { grid-template-columns: 1fr 1fr; }
+      .area-chip { padding: 14px 16px; min-height: 48px; }
+    }
+  </style>
+  <script src="/global-modal.js" defer></script>
+</head>
+<body>
+
+<!-- Skip to main content (accessibility) -->
+<a href="#home" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:9999;background:var(--gold);color:var(--navy);padding:8px 16px;font-weight:700;border-radius:2px" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to main content</a>
+
+<!-- GTM noscript: Add after client GTM setup -->
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="#home" class="nav-logo" aria-label="{{BRAND_NAME}} - Home">
+    <img loading="eager" src="/images/logo-rc-darkblue.webp"
+         alt="{{BRAND_NAME}} - Roofing & Construction" width="280" height="54" />
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/pages/gallery">Projects</a></li>
+    <li><a href="/pages/about">About</a></li>
+    <li><a href="#areas">Service Areas</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:{{PHONE_E164}}" class="nav-phone">{{PHONE}}</a></li>
+    <li><a href="#heroForm" class="nav-cta" onclick="document.getElementById('heroForm').querySelector('input[name=name]').focus();return false;">Free Inspection</a></li>
+  </ul>
+  <button class="mobile-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ───── HERO START ───── -->
+<main id="main-content">
+<section class="hero" id="home" aria-label="Utah roofing hero">
+  <div class="hero-img">
+    <img src="/images/photos/hero-main.webp"
+         alt="Aerial view of completed green shingle roof installation by {{BRAND_NAME}} with mountain backdrop"
+         fetchpriority="high" loading="eager" width="1920" height="1080">
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-badge">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0 Rating &bull; A+ BBB &bull; Serving 40+ Utah Cities</div>
+    <span class="hero-brand">{{BRAND_NAME}}</span>
+    <h1>The Gold Standard<br><span>In Utah Roofing</span></h1>
+    <p>Expert Craftsmanship. Industrial-Grade Quality. Superior Workmanship. Free roof inspections across the Wasatch Front — fully licensed &amp; insured with a 10&#8209;year workmanship warranty.</p>
+    <div class="hero-layout">
+      <div class="hero-left">
+        <div class="hero-actions">
+          <a href="#heroForm" class="btn-primary btn-arrow" onclick="document.getElementById('heroForm').querySelector('input[name=name]').focus();return false;">Free Roof Inspection</a>
+          <a href="tel:{{PHONE_E164}}" class="btn-secondary btn-arrow phone-cta">Tap to Call 435&#8209;302&#8209;4422</a>
+        </div>
+        <ul class="hero-points" aria-label="Why Utah homeowners choose {{BRAND_NAME}}">
+          <li>Uncompromising standards — no corners cut, built to endure.</li>
+          <li>Local, licensed &amp; invested in your neighborhood.</li>
+          <li>Frictionless experience — fast, easy, beautiful craftsmanship.</li>
+        </ul>
+      </div>
+      <div class="hero-form-card" aria-label="Request a free roof inspection">
+        <h2>Get Your Free Roof Inspection</h2>
+        <p>No pressure, no obligation. A specialist will call you within 15 minutes during business hours.</p>
+        <form id="heroForm" class="hero-form" data-endpoint="https://{{SUPABASE_ID}}.supabase.co/functions/v1/handle-lead">
+          <div class="form-row"><input type="text" name="name" placeholder="Full Name" required autocomplete="name"></div>
+          <div class="form-row"><input type="tel" name="phone" placeholder="Mobile Phone" required autocomplete="tel"></div>
+          <div class="form-row"><input type="email" name="email" placeholder="Email Address" required autocomplete="email"></div>
+          <div class="form-row two-col">
+            <input type="text" name="city" placeholder="City (e.g. Sandy)" required>
+            <input type="text" name="zip" placeholder="ZIP Code" required autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" maxlength="5">
+          </div>
+          <div class="form-row">
+            <select name="issue" required>
+              <option value="">What do you need?</option>
+              <option value="reroof">Reroof My Home</option>
+              <option value="leak">Active Roof Leak</option>
+              <option value="storm">Storm Damage</option>
+              <option value="gutters">Gutters &amp; Gutter Guards</option>
+              <option value="other">Something Else</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary hero-submit">Get My Free Roof Inspection</button>
+          <p class="form-note">By submitting, you consent to receive SMS/text messages and phone calls from {{BRAND_NAME}} regarding your inquiry. Msg &amp; data rates may apply. Reply STOP to opt out. View our <a href="/privacy" style="color:inherit;text-decoration:underline">Privacy Policy</a> &amp; <a href="/terms" style="color:inherit;text-decoration:underline">Terms</a>.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ───── HERO END ───── -->
+
+<!-- ─── TRUST BAR ─── -->
+<div class="trust-bar" role="list" aria-label="Trust signals — Utah Roofing Contractor">
+  <div class="trust-item" role="listitem"><div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><strong>Licensed &amp; Insured in Utah</strong></div>
+  <div class="trust-item" role="listitem"><div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><strong>Free Roof Inspections</strong></div>
+  <div class="trust-item" role="listitem"><div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><strong>24/7 Storm Response</strong></div>
+  <div class="trust-item" role="listitem"><div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#E1B969"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-.52.07-1.06.07-1.58 0A7.987 7.987 0 014 12c0-4.41 3.59-8 8-8s8 3.59 8 8a7.987 7.987 0 01-7 7.93zM12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div><strong>Financing Available</strong></div>
+  <a href="{{BBB_URL}}" target="_blank" rel="noopener" class="trust-item" role="listitem" style="text-decoration:none;color:inherit;"><div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><strong>BBB A+ Rated</strong></a>
+
+</div>
+
+<!-- ───── SERVICES START ───── -->
+<section id="services">
+  <div class="services-header reveal">
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title">Full-Service Roofing &amp;<br />Restoration in Utah</h2>
+    <p class="section-sub">From <strong>premium reroofs</strong> to emergency repairs — uncompromising standards, beautiful craftsmanship, and a frictionless experience across all of Utah.</p>
+  </div>
+  <div class="services-grid">
+    <a href="/pages/residential-roofing" class="service-card-link">
+      <div class="service-card reveal">
+        <img src="/images/services/residential.webp" alt="Premium residential roofing installation on Utah luxury home" class="service-card-img" loading="lazy" />
+        <div class="service-card-body">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <h3>Residential Roofing</h3>
+          <p><strong>Premium reroofs and full replacements</strong> for Utah homes. Shingles, standing seam metal, Presidential and Shake style shingles — beautiful craftsmanship built to endure Utah's mountain climate.</p>
+        </div>
+      </div>
+    </a>
+    <a href="/pages/storm-damage-restoration" class="service-card-link">
+      <div class="service-card reveal">
+        <img src="/images/services/storm-damage.webp" alt="Crew performing storm damage roof tear-off and repair" class="service-card-img" loading="lazy" />
+        <div class="service-card-body">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Storm Damage Restoration</h3>
+          <p><strong>Utah hail, wind, and snow damage specialists.</strong> We work directly with your insurance company to get your claim approved and your roof restored fast — transparent, upfront estimates.</p>
+        </div>
+      </div>
+    </a>
+    <a href="/pages/commercial-roofing" class="service-card-link">
+      <div class="service-card reveal">
+        <img src="/images/services/commercial.webp" alt="Standing seam metal roof installation for commercial building" class="service-card-img" loading="lazy" />
+        <div class="service-card-body">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
+          <h3>Commercial Roofing</h3>
+          <p>Large-scale flat roofing, TPO, EPDM, and metal systems for Utah businesses, HOAs, industrial facilities, and multifamily properties across the Wasatch Front.</p>
+        </div>
+      </div>
+    </a>
+    <a href="/pages/gutters" class="service-card-link">
+      <div class="service-card reveal">
+        <img src="/images/services/gutters.webp" alt="Completed roof with clean gutter lines and premium shingles" class="service-card-img" loading="lazy" />
+        <div class="service-card-body">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div>
+          <h3>Gutters &amp; Gutter Guards</h3>
+          <p><strong>Seamless aluminum, copper, and steel gutter systems</strong> with premium gutter guards. Protect your Utah home from water damage with expert installation and a 10&#8209;year workmanship warranty.</p>
+        </div>
+      </div>
+    </a>
+    <a href="/pages/water-fire-flood-restoration" class="service-card-link">
+      <div class="service-card reveal">
+        <img src="/images/services/restoration.webp" alt="{{BRAND_NAME}} work truck and trailer at emergency restoration job site" class="service-card-img" loading="lazy" />
+        <div class="service-card-body">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <h3>Water, Fire &amp; Flood Restoration</h3>
+          <p>24/7 emergency restoration for water intrusion, fire damage, and flooding. We mitigate fast and restore your Utah property to pre-loss condition, start to finish.</p>
+        </div>
+      </div>
+    </a>
+    <a href="/pages/solar-installation" class="service-card-link">
+      <div class="service-card reveal">
+        <img src="/images/services/solar.webp" alt="Clean roof surface ready for solar panel installation with Utah mountains" class="service-card-img" loading="lazy" />
+        <div class="service-card-body">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
+          <h3>Solar Installation</h3>
+          <p>Maximize Utah's 300+ annual sunny days. Roof-integrated solar systems that protect your roof while slashing energy bills for homeowners across the Salt Lake Valley.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+<!-- ───── SERVICES END ───── -->
+
+<!-- ─── STATS COUNTER ─── -->
+<section class="stats-section" aria-label="Company statistics">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="10" data-suffix="+">0<span class="stat-suffix">+</span></div>
+      <div class="stat-label">Years Experience</div>
+      <div class="stat-desc">Trusted roofing expertise you can count on</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="44">0</div>
+      <div class="stat-label">Cities Served</div>
+      <div class="stat-desc">From Ogden to Provo and everywhere between</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="5" data-decimals="1" data-suffix="★">0<span class="stat-suffix">★</span></div>
+      <div class="stat-label">Google Rating</div>
+      <div class="stat-desc">19 five-star reviews and counting</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="24" data-suffix="/7">0<span class="stat-suffix">/7</span></div>
+      <div class="stat-label">Emergency Response</div>
+      <div class="stat-desc">Storm damage? We're there when you need us</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FINANCING CTA ─── -->
+<section class="financing-section" aria-label="Financing options">
+  <div class="financing-inner reveal">
+    <div class="financing-text">
+      <span class="section-label">Flexible Payment Options</span>
+      <h2 class="section-title" style="color:var(--navy);">Quality Roofing,<br><span style="color:var(--gold);">Affordable Payments</span></h2>
+      <p>Don't let budget stop you from protecting your home. We've partnered with <strong>Wisetack</strong> to offer easy, affordable financing on all roofing and restoration projects. Get pre-qualified in minutes with no impact to your credit score.</p>
+      <div class="financing-features">
+        <div class="financing-feat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg> Loans from $500–$100,000</div>
+        <div class="financing-feat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg> Terms up to 60 months</div>
+        <div class="financing-feat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg> No prepayment penalties</div>
+        <div class="financing-feat"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--gold)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg> Quick pre-qualification — no credit impact</div>
+      </div>
+      <a href="#contact" class="btn-primary btn-arrow" style="margin-top:24px;">Get a Free Quote + Financing Options →</a>
+    </div>
+    <div class="financing-badge">
+      <div class="financing-badge-inner">
+        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="var(--gold)" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        <div class="financing-badge-text">Powered by</div>
+        <div class="financing-badge-brand">Wisetack</div>
+        <div class="financing-badge-sub">Customer financing<br>people actually love</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FULL-WIDTH DRONE BREAK ─── -->
+<div class="drone-break">
+  <img src="/images/projects/heber-valley-roof-aerial.webp" alt="Aerial view of completed luxury roof by {{BRAND_NAME}}" loading="lazy" />
+  <div class="drone-break-overlay">
+    <div class="drone-break-text">
+      <h2>See the Difference<br><span style="color:var(--gold)">From Above</span></h2>
+      <p>Every project gets the drone treatment. We document our work because we're proud of it.</p>
+      <a href="/projects/heber-valley-roof" class="btn-primary btn-arrow">View Our Work</a>
+    </div>
+  </div>
+</div>
+
+<!-- ─── GALLERY ─── -->
+<section id="gallery">
+  <div class="gallery-header reveal">
+    <span class="section-label" style="color:var(--gold)">Our Work</span>
+    <h2 class="section-title">Utah Projects &amp; Completed Work</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="/images/photos/project-01.webp" alt="Completed gray shingle roof installation in Utah with mountain views" loading="lazy" width="600" height="520" /></div>
+    <div class="gallery-item"><img src="/images/photos/project-02.webp" alt="Aerial view of finished residential roof replacement in rural Utah" loading="lazy" width="600" height="260" /></div>
+    <div class="gallery-item"><img src="/images/photos/project-03.webp" alt="{{BRAND_NAME}} crew working on residential roof replacement in Utah" loading="lazy" width="600" height="260" /></div>
+    <div class="gallery-item"><img src="/images/photos/project-04.webp" alt="Completed gray shingle roof with mountains in background" loading="lazy" width="600" height="260" /></div>
+    <div class="gallery-item"><img src="/images/projects/heber-valley-roof-front.webp" alt="Completed luxury home roof with crew and equipment in Heber Valley" loading="lazy" width="600" height="260" /></div>
+  </div>
+</section>
+
+<!-- ─── VIDEO SHOWCASE ─── -->
+<section id="video-showcase">
+  <!-- Curved navy-to-white transition -->
+  <div class="video-curve" aria-hidden="true">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 L0,60 Q720,120 1440,60 L1440,0 Z" fill="var(--navy)"/>
+    </svg>
+  </div>
+  <div class="video-grid">
+    <div class="video-player reveal">
+      <video autoplay muted loop playsinline preload="metadata" poster="/images/projects/heber-valley-drone-poster.webp">
+        <source src="/assets/drone-footage.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="video-headline reveal">
+      <h2><span class="gold">{{BRAND_NAME}}</span> Is Your Trusted Local Roofing Company and General Contractor.</h2>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHY US ─── -->
+<section id="why">
+  <div class="why-grid">
+    <div class="why-img reveal">
+      <img src="/images/photos/about-team.webp"
+           alt="Stone and wood Utah home with completed green shingle roof by {{BRAND_NAME}}" width="600" height="500" loading="lazy" />
+      <div class="why-badge" aria-hidden="true"><div class="num">100%</div><div class="lbl">Satisfaction<br>Guarantee</div></div>
+    </div>
+    <div class="reveal">
+      <span class="section-label">Why {{BRAND_NAME}}</span>
+      <h2 class="section-title">The {{BRAND_NAME}}<br />Difference</h2>
+      <p class="section-sub">Uncompromising standards. No corners cut. Roofs built to endure.</p>
+      <div class="why-points">
+        <div class="why-point"><span class="why-num" aria-hidden="true">01</span><div><h4>Uncompromising Standards</h4><p>Industrial-grade quality on every project. We never cut corners — from materials to installation, every detail is executed with precision and care.</p></div></div>
+        <div class="why-point"><span class="why-num" aria-hidden="true">02</span><div><h4>Local, Licensed &amp; Invested</h4><p>We live and work in the communities we serve. Headquartered in {{CITY}}, our Utah crew is invested in your neighborhood for the long haul — backed by a 10&#8209;year workmanship warranty.</p></div></div>
+        <div class="why-point"><span class="why-num" aria-hidden="true">03</span><div><h4>A Frictionless Experience</h4><p>Easy. Fast. High quality. From your first call to final walkthrough, we make the process streamlined and stress-free — so you can focus on what matters.</p></div></div>
+        <div class="why-point"><span class="why-num" aria-hidden="true">04</span><div><h4>Free Inspections. No Pressure.</h4><p>100% free with zero obligation. Our Utah experts assess your roof and give you a clear written report — whether you need work done or not.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section id="testimonials">
+  <div class="testimonials-header reveal">
+    <span class="section-label">What Utah Homeowners Say</span>
+    <h2 class="section-title">Real Reviews.<br />Real Results.</h2>
+    <p class="section-sub">From the Salt Lake Valley to the Wasatch Back — hear from Utah homeowners who trusted {{BRAND_NAME}}.</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <p class="testimonial-text">"I had a persistent roof leak for several years that was extremely difficult to locate. Two other roofing companies couldn't find the source. Both simply recommended replacing the entire roof. {{OWNER_FIRST_NAME}} approached the problem completely differently. He sent a crew out to carefully patch all of the most likely problem areas instead of pushing a full replacement. Excellent value, honest work, and outstanding service."</p>
+      <div class="testimonial-author">Timothy Kaspar</div>
+      <div class="testimonial-city">Millcreek &middot; Google Review</div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <p class="testimonial-text">"{{OWNER_FIRST_NAME}} was top notch. He made everything easy and checked in with me along the way for a total roof replacement I needed done. I can't say enough about the job they did for my mom's house. She needed a new roof badly. Thank you for being an honest and fair roofing contractor who lived up to every inch of what was promised."</p>
+      <div class="testimonial-author">Coach Sis</div>
+      <div class="testimonial-city">Sandy &middot; Google Review</div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <p class="testimonial-text">"{{OWNER_FIRST_NAME}}, the owner, is a pleasure to work with. He's forthright, a good communicator, and is fair with pricing. {{BRAND_NAME}} re-roofed 2 of our buildings and the final product looks great. Plus, the work was done efficiently and cleanly — my yard and gardens look like they did before we re-roofed."</p>
+      <div class="testimonial-author">Stephen Tolpinrud</div>
+      <div class="testimonial-city">Google Review</div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <p class="testimonial-text">"High quality workmanship by his crew, cleaned up every nail and garbage. Communicated throughout the process and made sure we were happy before he got paid."</p>
+      <div class="testimonial-author">Chris Chatzis</div>
+      <div class="testimonial-city">Google Review</div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <p class="testimonial-text">"{{BRAND_NAME}} did an excellent job replacing our casitas roof in only one day. The crew was very efficient, respectful, and clean. I highly recommend this company to anyone needing a new roof, as their work is of high quality and they are trustworthy people."</p>
+      <div class="testimonial-author">Marie Conroe</div>
+      <div class="testimonial-city">Google Review</div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <p class="testimonial-text">"Working with {{OWNER_FIRST_NAME}} was a breeze. He was knowledgeable and provided me with excellent advice on the best options for our new roof. His pricing came in at just over a third of a bid we received from another company. The crew did excellent work, completed our roof in a single day, and left the property clean afterward."</p>
+      <div class="testimonial-author">Sam Thornton</div>
+      <div class="testimonial-city">Millcreek &middot; Google Review</div>
+    </div>
+  </div>
+
+  <!-- Google Reviews Widget — replace PLACE_ID with {{BRAND_NAME}}'s Google Place ID once available -->
+  <div id="google-reviews-widget" style="max-width:1100px;margin:48px auto 0;text-align:center;" class="reveal">
+    <a href="{{GOOGLE_MAPS_REVIEW_URL}}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:var(--off-white);border:1px solid var(--light-gray);border-radius:8px;text-decoration:none;color:var(--dark);font-size:15px;font-weight:600;transition:border-color 0.2s;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      ★★★★★ 5.0 &nbsp;See All 19 Google Reviews →
+    </a>
+    <!-- TODO: Once customer provides Google Place ID, replace this link with an Elfsight widget or Google Reviews API embed -->
+  </div>
+</section>
+
+<!-- ─── SERVICE AREAS — Full Wasatch Front ─── -->
+<section id="areas">
+  <div class="areas-header reveal">
+    <span class="section-label">Utah Service Area</span>
+    <h2 class="section-title">Serving the Full Salt Lake<br />Valley &amp; Wasatch Front</h2>
+    <p class="section-sub">From Santaquin in the south to Layton in the north — and east into the Wasatch Back. 40+ Utah communities covered.</p>
+  </div>
+
+  <div class="county-group reveal">
+    <p class="county-label">Davis County — North Wasatch Front</p>
+    <div class="areas-grid">
+      <a href="/locations/bountiful" class="area-chip">Bountiful</a>
+      <a href="/locations/west-bountiful" class="area-chip">West Bountiful</a>
+      <a href="/locations/north-salt-lake" class="area-chip">North Salt Lake</a>
+      <a href="/locations/woods-cross" class="area-chip">Woods Cross</a>
+      <a href="/locations/centerville" class="area-chip">Centerville</a>
+      <a href="/locations/farmington" class="area-chip">Farmington</a>
+      <a href="/locations/kaysville" class="area-chip">Kaysville</a>
+      <a href="/locations/layton" class="area-chip">Layton</a>
+      <a href="/locations/clearfield" class="area-chip">Clearfield</a>
+      <a href="/locations/syracuse" class="area-chip">Syracuse</a>
+      <a href="/locations/clinton" class="area-chip">Clinton</a>
+    </div>
+  </div>
+
+  <div class="county-group reveal">
+    <p class="county-label">Salt Lake County — North &amp; Central Valley</p>
+    <div class="areas-grid">
+      <a href="/locations/salt-lake-city" class="area-chip">Salt Lake City</a>
+      <a href="/locations/west-valley-city" class="area-chip">West Valley City</a>
+      <a href="/locations/magna" class="area-chip">Magna</a>
+      <a href="/locations/kearns" class="area-chip">Kearns</a>
+      <a href="/locations/taylorsville" class="area-chip">Taylorsville</a>
+      <a href="/locations/murray" class="area-chip">Murray</a>
+      <a href="/locations/millcreek" class="area-chip">Millcreek</a>
+      <a href="/locations/south-salt-lake" class="area-chip">South Salt Lake</a>
+      <a href="/locations/holladay" class="area-chip">Holladay</a>
+      <a href="/locations/midvale" class="area-chip">Midvale</a>
+    </div>
+  </div>
+
+  <div class="county-group reveal">
+    <p class="county-label">Salt Lake County — East Bench &amp; South Valley</p>
+    <div class="areas-grid">
+      <a href="/locations/cottonwood-heights" class="area-chip">Cottonwood Heights</a>
+      <a href="/locations/sandy" class="area-chip">Sandy</a>
+      <a href="/locations/west-jordan" class="area-chip">West Jordan</a>
+      <a href="/locations/south-jordan" class="area-chip">South Jordan</a>
+      <a href="/locations/riverton" class="area-chip">Riverton</a>
+      <a href="/locations/herriman" class="area-chip">Herriman</a>
+      <a href="/locations/bluffdale" class="area-chip">Bluffdale</a>
+      <a href="/locations/draper" class="area-chip">Draper</a>
+    </div>
+  </div>
+
+  <div class="county-group reveal">
+    <p class="county-label">Utah County — South Wasatch Front</p>
+    <div class="areas-grid">
+      <a href="/locations/lehi" class="area-chip">Lehi</a>
+      <a href="/locations/alpine" class="area-chip">Alpine</a>
+      <a href="/locations/highland" class="area-chip">Highland</a>
+      <a href="/locations/american-fork" class="area-chip">American Fork</a>
+      <a href="/locations/pleasant-grove" class="area-chip">Pleasant Grove</a>
+      <a href="/locations/lindon" class="area-chip">Lindon</a>
+      <a href="/locations/orem" class="area-chip">Orem</a>
+      <a href="/locations/provo" class="area-chip">Provo</a>
+      <a href="/locations/springville" class="area-chip">Springville</a>
+      <a href="/locations/payson" class="area-chip">Payson</a>
+      <a href="/locations/santaquin" class="area-chip">Santaquin</a>
+    </div>
+  </div>
+
+  <div class="county-group reveal">
+    <p class="county-label">Wasatch Back &amp; Mountain Communities</p>
+    <div class="areas-grid">
+      <a href="/locations/heber-city" class="area-chip">{{CITY}}</a>
+      <a href="/locations/midway" class="area-chip">Midway</a>
+      <a href="/locations/park-city" class="area-chip">Park City</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ─── CTA BANNER ─── -->
+<section id="cta">
+  <h2 class="reveal">Get Your Free<br />Roof Inspection Today</h2>
+  <p class="reveal">No pressure. No obligation. Just honest answers from Utah's roofing experts.</p>
+  <div class="reveal">
+    <a href="https://calendar.app.google/cR4bBSWfb9TQ28UF8" target="_blank" rel="noopener" class="btn-navy">Schedule Online</a>
+    <a href="tel:{{PHONE_E164}}" class="btn-outline-navy">Call {{PHONE}}</a>
+  </div>
+</section>
+
+<!-- ─── FAQ — mirrors FAQPage schema ─── -->
+<section id="faq">
+  <div class="faq-intro reveal">
+    <span class="section-label">Common Questions</span>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Everything Utah homeowners ask before their free inspection.</p>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Does {{BRAND_NAME}} work with insurance?<span class="faq-toggle" aria-hidden="true">+</span></div>
+      <div class="faq-a">Yes. We specialize in insurance claim navigation. We document all storm and hail damage, work directly with your adjuster, and help ensure you receive the full payout you're entitled to. We've helped hundreds of Utah homeowners get claims approved.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Do you offer free inspections in Salt Lake City?<span class="faq-toggle" aria-hidden="true">+</span></div>
+      <div class="faq-a">Yes — 100% free, no-obligation roof inspections across the entire Salt Lake Valley and Wasatch Front. From Bountiful and Layton in the north to Provo and Payson in the south. Call {{PHONE}} or schedule online.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What areas does {{BRAND_NAME}} serve?<span class="faq-toggle" aria-hidden="true">+</span></div>
+      <div class="faq-a">We serve 40+ communities across the Wasatch Front including Salt Lake City, West Jordan, Sandy, Draper, Murray, Cottonwood Heights, Bountiful, Layton, Lehi, Orem, Provo, and more. our headquarters is {{CITY}}, UT.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What warranty do you offer on roofing work?<span class="faq-toggle" aria-hidden="true">+</span></div>
+      <div class="faq-a">We back every job with a 10‑year workmanship warranty plus lifetime material warranties from our manufacturer partners. If any issue with our work arises, we return and fix it at no charge.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Is {{BRAND_NAME}} licensed and insured?<span class="faq-toggle" aria-hidden="true">+</span></div>
+      <div class="faq-a">Yes. {{LEGAL_NAME}} is fully licensed and insured in the state of Utah (DOPL License {{LICENSE_NUMBER}}). We carry comprehensive general liability insurance and workers' compensation coverage on every project — verified by ACORD certificate on file with the Utah Division of Occupational and Professional Licensing.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Do you offer financing for roofing projects?<span class="faq-toggle" aria-hidden="true">+</span></div>
+      <div class="faq-a">Yes! We've partnered with Wisetack to offer flexible financing on all roofing and restoration projects. Get pre-qualified in minutes with no impact to your credit score. Loan amounts from $500 to $100,000 with terms up to 60 months and no prepayment penalties. Ask about financing options during your free inspection.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Do you handle emergency storm damage in Utah?<span class="faq-toggle" aria-hidden="true">+</span></div>
+      <div class="faq-a">Yes. We provide rapid emergency response for storm, hail, wind, and snow damage across the Wasatch Front. Call {{PHONE}} for urgent roof tarping, leak mitigation, and damage assessment.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT — Real Formspree form ─── -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="reveal">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Contact {{BRAND_NAME}}</h2>
+      <div style="margin-top:36px">
+        <div class="contact-detail">
+          <div class="contact-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h5>Address</h5><p>{{ADDRESS}}, {{CITY}}, UT 84032</p></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.03 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div>
+          <div><h5>Phone</h5><a href="tel:{{PHONE_E164}}">{{PHONE}}</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><h5>Email</h5><a href="mailto:sales@{{DOMAIN}}">sales@{{DOMAIN}}</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#E1B969" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><h5>Hours</h5><p>Monday–Saturday: 8AM–6PM</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <!-- Contact Form — Supabase edge function -->
+      <form class="contact-form" id="leadForm" data-endpoint="https://{{SUPABASE_ID}}.supabase.co/functions/v1/handle-lead">
+        <h3>Request a Free Inspection</h3>
+        <div class="form-row">
+          <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" name="first_name" placeholder="John" required /></div>
+          <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" name="last_name" placeholder="Smith" required /></div>
+        </div>
+        <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="{{PHONE}}" required /></div>
+        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="you@email.com" required /></div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service...</option>
+            <option>Residential Roofing</option>
+            <option>Commercial Roofing</option>
+            <option>Storm Damage / Insurance Claim</option>
+            <option>Water / Fire / Flood Restoration</option>
+            <option>Solar Installation</option>
+            <option>General Contracting</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="city">City / ZIP Code</label><input type="text" id="city" name="city" placeholder="e.g. West Jordan, UT 84084" required /></div>
+        <div class="form-group"><label for="message">Additional Details (optional)</label><textarea id="message" name="message" placeholder="Tell us about your project..."></textarea></div>
+        <div style="display:flex;align-items:center;gap:10px;margin:12px 0 4px;font-size:13px;color:var(--gray);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B4060" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>By submitting, you consent to receive SMS/text messages and phone calls from {{BRAND_NAME}} regarding your inquiry. Msg &amp; data rates may apply. Reply STOP to opt out. View our <a href="/privacy" style="color:inherit;text-decoration:underline">Privacy Policy</a> &amp; <a href="/terms" style="color:inherit;text-decoration:underline">Terms</a>.</span>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">Submit — Get My Free Inspection</button>
+        <p style="text-align:center;font-size:13px;color:var(--gray);margin-top:10px;">
+          ★★★★★ &nbsp;A+ BBB Rated &nbsp;·&nbsp; Free, no-obligation inspection
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="/images/wordmark-white.svg" alt="{{BRAND_NAME}}" width="160" height="44" loading="lazy" />
+      <p>Utah's trusted roofing and general contracting experts. Serving Salt Lake City, Provo, Ogden, Heber, and 40+ communities across the Wasatch Front and Salt Lake Valley.</p>
+      <div class="footer-social">
+        <a href="{{FACEBOOK_URL}}" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/{{DOMAIN_SHORT}}" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="{{GOOGLE_BUSINESS_URL}}" target="_blank" rel="noopener" aria-label="Google Business">
+          <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </a>
+        <a href="{{YELP_URL}}" target="_blank" rel="noopener" aria-label="Yelp">
+          <svg viewBox="0 0 24 24"><path d="M20.16 12.594l-4.995 1.433c-.96.276-1.74-.8-1.176-1.63l2.762-4.08c.276-.408.18-.948-.228-1.224-.192-.132-.42-.192-.648-.18l-4.956.516c-1.008.108-1.62-1.08-.924-1.788L14.403.744c.336-.336.336-.876 0-1.212-.168-.168-.396-.252-.624-.252H9.003c-.492 0-.888.396-.888.888v9.852c0 .612-.792.852-1.116.336L3.243 4.776a.884.884 0 00-1.2-.312.884.884 0 00-.312 1.2l4.764 8.1c.3.504-.084 1.14-.672 1.14H.891c-.492 0-.888.396-.888.888v4.776c0 .492.396.888.888.888h4.932c.588 0 .972.636.672 1.14l-1.476 2.508a.884.884 0 00.312 1.2.884.884 0 001.2-.312l3.756-5.58c.324-.516 1.116-.276 1.116.336v2.784c0 .492.396.888.888.888h4.776c.228 0 .456-.084.624-.252.336-.336.336-.876 0-1.212l-4.404-4.896c-.696-.708-.084-1.896.924-1.788l4.956.516c.228.012.456-.048.648-.18.408-.276.504-.816.228-1.224l-2.7-3.996z"/></svg>
+        </a>
+      </div>
+      <div class="footer-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3044.5!2d-111.4155!3d{{LAT}}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDMwJzI0LjgiTiAxMTHCsDI0JzQ3LjkiVw!5e0!3m2!1sen!2sus!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="{{BRAND_NAME}} - {{CITY}} Office"></iframe>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/pages/residential-roofing">Residential Roofing</a></li>
+        <li><a href="/pages/commercial-roofing">Commercial Roofing</a></li>
+        <li><a href="/pages/storm-damage-restoration">Storm Damage</a></li>
+        <li><a href="#services">Water &amp; Fire Restoration</a></li>
+        <li><a href="#services">Solar Installation</a></li>
+        <li><a href="/pages/gutters">Gutters &amp; Gutter Guards</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="/locations/salt-lake-city">Salt Lake City</a></li>
+        <li><a href="/locations/west-jordan">West Jordan / South Jordan</a></li>
+        <li><a href="/locations/sandy">Sandy / Draper / Cottonwood</a></li>
+        <li><a href="/locations/provo">Provo / Orem / Lehi</a></li>
+        <li><a href="/locations/bountiful">Bountiful / Layton</a></li>
+        <li><a href="/locations/heber-city">{{CITY}} / Park City</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:{{PHONE_E164}}">{{PHONE}}</a></li>
+        <li><a href="mailto:sales@{{DOMAIN}}">sales@{{DOMAIN}}</a></li>
+        <li><a href="#contact">{{ADDRESS}}, {{CITY}} UT</a></li>
+        <li><a href="https://www.{{DOMAIN}}/" target="_blank" rel="noopener">{{BRAND_NAME}} →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 {{BRAND_NAME}}. All rights reserved. | Licensed &amp; Insured in Utah</span>
+    <span>
+      <a href="/privacy">Privacy Policy</a> &nbsp;|&nbsp;
+      <a href="/terms">Terms of Service</a> &nbsp;|&nbsp;
+      <a href="/sitemap.xml">Sitemap</a> &nbsp;|&nbsp;
+      Part of <a href="https://www.{{DOMAIN}}/" target="_blank" rel="noopener nofollow">{{BRAND_NAME}}</a> — Proudly Serving Utah
+    </span>
+  </div>
+</footer>
+
+<!-- ─── STICKY MOBILE CALL BAR ─── -->
+<div class="sticky-call" role="complementary" aria-label="Call us">
+  <a href="tel:{{PHONE_E164}}">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.03 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+    Call Now — {{PHONE}} — Free Inspection
+  </a>
+</div>
+
+<!-- FIX 1+4: Complete JS, no defer on inline scripts (defer only works on external src scripts) -->
+<script>
+  // Scroll to top on load — prevents iOS/mobile opening mid-page
+  window.addEventListener('load', function() { window.scrollTo(0, 0); });
+
+  // Wait for DOM ready — replaces broken defer on inline script
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // Mobile nav toggle
+    var menuBtn = document.getElementById('menuBtn');
+    var navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', function() {
+      var isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll reveal — add js-ready FIRST so CSS hides elements, then observe
+    document.documentElement.classList.add('js-ready');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add('visible');
+      } else {
+        observer.observe(el);
+      }
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(function(q) {
+      var activate = function() {
+        var item = q.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(i) {
+          i.classList.remove('open');
+          i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          q.setAttribute('aria-expanded', 'true');
+        }
+      };
+      q.addEventListener('click', activate);
+      q.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+      });
+    });
+
+    // GTM: Phone + schedule click tracking
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (window.dataLayer) {
+          window.dataLayer.push({ event: 'phone_click', phone_number: '{{PHONE}}' });
+        }
+      });
+    });
+    // Hero form: AJAX submit with success/error states
+    var heroForm = document.getElementById('heroForm');
+    if (heroForm) {
+      heroForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = heroForm.querySelector('.hero-submit');
+        var formCard = heroForm.closest('.hero-form-card');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        var payload = {};
+        new FormData(heroForm).forEach(function(v, k) { payload[k] = v; });
+        payload.source_page = window.location.pathname;
+
+        fetch(heroForm.getAttribute('data-endpoint'), {
+          method: 'POST',
+          body: JSON.stringify(payload),
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+        }).then(function(res) {
+          if (res.ok) {
+            formCard.innerHTML = '<div style="text-align:center;padding:40px 20px"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" style="width:48px;height:48px;margin:0 auto 16px;display:block"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg><h2 style="font-family:Archivo Black,sans-serif;color:var(--navy);font-size:22px;text-transform:uppercase;margin-bottom:8px">Thanks!</h2><p style="color:var(--gray);font-size:15px;line-height:1.6">We\'ll call you within 15 minutes<br>during business hours.</p><a href="tel:{{PHONE_E164}}" style="display:inline-block;margin-top:16px;color:var(--navy);font-family:Archivo Black,sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:1px;text-decoration:none">Or call now: {{PHONE}}</a></div>';
+            if (window.dataLayer) { window.dataLayer.push({ event: 'form_submit', form_name: 'hero_inspection' }); }
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Get My Free Roof Inspection';
+            btn.insertAdjacentHTML('afterend', '<p style="color:#c0392b;font-size:12px;text-align:center;margin-top:8px">Something went wrong. Please try again or call {{PHONE}}.</p>');
+          }
+        }).catch(function() {
+          btn.disabled = false;
+          btn.textContent = 'Get My Free Roof Inspection';
+          btn.insertAdjacentHTML('afterend', '<p style="color:#c0392b;font-size:12px;text-align:center;margin-top:8px">Network error. Please call {{PHONE}}.</p>');
+        });
+      });
+    }
+
+    // Lead form (bottom of page): AJAX submit
+    var leadForm = document.getElementById('leadForm');
+    if (leadForm) {
+      leadForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = leadForm.querySelector('.form-submit');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+        var payload = {};
+        new FormData(leadForm).forEach(function(v, k) { payload[k] = v; });
+        payload.source_page = window.location.pathname;
+        fetch(leadForm.getAttribute('data-endpoint'), {
+          method: 'POST',
+          body: JSON.stringify(payload),
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+        }).then(function(res) {
+          if (res.ok) {
+            leadForm.innerHTML = '<div style="text-align:center;padding:40px 20px"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" style="width:48px;height:48px;margin:0 auto 16px;display:block"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg><h2 style="font-family:Archivo Black,sans-serif;color:var(--navy);font-size:22px;text-transform:uppercase;margin-bottom:8px">Thanks!</h2><p style="color:var(--gray);font-size:15px;line-height:1.6">We\'ll call you within 15 minutes<br>during business hours.</p><a href="tel:{{PHONE_E164}}" style="display:inline-block;margin-top:16px;color:var(--navy);font-family:Archivo Black,sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:1px;text-decoration:none">Or call now: {{PHONE}}</a></div>';
+            if (window.dataLayer) { window.dataLayer.push({ event: 'form_submit', form_name: 'lead_form' }); }
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Submit — Get My Free Inspection';
+            btn.insertAdjacentHTML('afterend', '<p style="color:#c0392b;font-size:12px;text-align:center;margin-top:8px">Something went wrong. Please try again or call {{PHONE}}.</p>');
+          }
+        }).catch(function() {
+          btn.disabled = false;
+          btn.textContent = 'Submit — Get My Free Inspection';
+          btn.insertAdjacentHTML('afterend', '<p style="color:#c0392b;font-size:12px;text-align:center;margin-top:8px">Network error. Please call {{PHONE}}.</p>');
+        });
+      });
+    }
+
+    // Nav CTA + hero CTA: smooth scroll to form & highlight
+    document.querySelectorAll('a[href="#heroForm"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        var form = document.getElementById('heroForm');
+        if (form) {
+          form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          var card = form.closest('.hero-form-card');
+          card.style.boxShadow = '0 0 0 3px var(--gold), 0 16px 48px rgba(0,0,0,0.3)';
+          setTimeout(function() { card.style.boxShadow = ''; }, 1500);
+          form.querySelector('input[name=name]').focus({ preventScroll: true });
+        }
+        // Close mobile nav if open
+        var navLinks = document.getElementById('navLinks');
+        if (navLinks) { navLinks.classList.remove('open'); }
+        if (window.dataLayer) { window.dataLayer.push({ event: 'cta_click', cta_label: 'free_inspection' }); }
+      });
+    });
+
+  })();
+  </script>
+
+  <!-- Stats Counter Animation -->
+  <script>
+  (function() {
+    var counted = false;
+    function animateCounters() {
+      if (counted) return;
+      var stats = document.querySelectorAll('.stat-number[data-target]');
+      if (!stats.length) return;
+      counted = true;
+      stats.forEach(function(el) {
+        var target = parseFloat(el.getAttribute('data-target'));
+        var suffix = el.getAttribute('data-suffix') || '';
+        var decimals = parseInt(el.getAttribute('data-decimals')) || 0;
+        var duration = 2000;
+        var start = 0;
+        var startTime = null;
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = eased * target;
+          if (decimals > 0) {
+            el.innerHTML = current.toFixed(decimals) + '<span class="stat-suffix">' + suffix + '</span>';
+          } else {
+            el.innerHTML = Math.floor(current).toLocaleString() + '<span class="stat-suffix">' + suffix + '</span>';
+          }
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    }
+    var statsSection = document.querySelector('.stats-section');
+    if (statsSection && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting) animateCounters();
+      }, { threshold: 0.3 }).observe(statsSection);
+    }
+  })();
+  </script>
+
+  <!-- Lead Form Handler — sends to Supabase edge function -->
+  <script>
+  (function() {
+    document.querySelectorAll('form[data-endpoint]').forEach(function(form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var btn = form.querySelector('button[type=submit]');
+        var originalText = btn.textContent;
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+
+        var data = {};
+        new FormData(form).forEach(function(val, key) { data[key] = val; });
+        data.source_page = window.location.pathname;
+
+        try {
+          var res = await fetch(form.dataset.endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          var result = await res.json();
+          if (result.success) {
+            form.innerHTML = '<div style="text-align:center;padding:40px 20px"><h3 style="color:var(--gold);margin-bottom:12px">Thank You!</h3><p style="color:var(--white,#333)">We received your request and will call you shortly.</p></div>';
+          } else {
+            btn.textContent = 'Try Again';
+            btn.disabled = false;
+            alert('Something went wrong. Please call us at {{PHONE}}.');
+          }
+        } catch (err) {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          alert('Connection error. Please call us at {{PHONE}}.');
+        }
+      });
+    });
+  })();
+  </script>
+
+</body>
+</html>

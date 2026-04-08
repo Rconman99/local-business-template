@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | {{BRAND_NAME}}</title>
+  <meta name="description" content="Privacy Policy for {{BRAND_NAME}}." />
+  <link rel="canonical" href="https://{{DOMAIN}}/privacy" />
+  <link rel="icon" href="/images/logos/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --navy: {{NAVY}}; --gold: {{GOLD}}; --off-white: {{OFF_WHITE}}; --dark: #262626; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Archivo', sans-serif; color: var(--dark); background: var(--off-white); }
+    a { color: inherit; }
+    .inner-nav { background: var(--navy); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .inner-nav a { color: #fff; font-family: 'Archivo Black', sans-serif; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; }
+    .inner-nav .nav-cta { background: var(--gold); color: var(--navy); padding: 10px 20px; border-radius: 4px; font-size: 13px; }
+    .blog-hero { padding: 100px 24px 60px; background: var(--navy); text-align: center; }
+    .blog-hero h1 { font-family: 'Archivo Black', sans-serif; font-size: clamp(28px,5vw,42px); color: #fff; text-transform: uppercase; }    .blog-body { max-width: 800px; margin: -30px auto 60px; background: #fff; border-radius: 8px; padding: 48px 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    .blog-body h2 { font-family: 'Archivo Black', sans-serif; font-size: 20px; color: var(--navy); text-transform: uppercase; margin: 28px 0 10px; }
+    .blog-body p, .blog-body li { font-size: 15px; line-height: 1.8; color: #444; margin-bottom: 12px; }
+    .blog-body ul { margin: 8px 0 16px 24px; }
+    .footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 40px 24px; text-align: center; font-size: 14px; }
+    .footer a { color: var(--gold); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav class="inner-nav">
+    <a href="/">{{BRAND_NAME}}</a>
+    <a href="/#heroForm" class="nav-cta">Free Estimate</a>
+  </nav>
+  <section class="blog-hero"><h1>Privacy Policy</h1></section>
+  <article class="blog-body">
+    <p><strong>Effective Date:</strong> {{PRIVACY_DATE}}</p>
+    <p>{{LLC_NAME}} ("we," "us," or "our") operates the website <a href="https://{{DOMAIN}}">{{DOMAIN}}</a>. This Privacy Policy explains how we collect, use, and protect your information.</p>
+
+    <h2>Information We Collect</h2>
+    <p>When you submit a form on our website, we collect your name, phone number, email address, city, ZIP code, and the nature of your inquiry. We also collect standard web analytics data (pages visited, browser type, device).</p>
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To respond to your inquiry and provide requested services</li>
+      <li>To send SMS/text messages and make phone calls related to your inquiry</li>
+      <li>To improve our website and services</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+
+    <h2>SMS/Text Messaging</h2>
+    <p>By submitting a form on our website, you consent to receive SMS/text messages from {{BRAND_NAME}} at the phone number you provided. Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time. Reply HELP for assistance.</p>
+
+    <h2>Information Sharing</h2>
+    <p>We do not sell your personal information. We may share information with service providers who assist us in operating our website and conducting our business (e.g., hosting, analytics, communication tools).</p>
+
+    <h2>Data Security</h2>
+    <p>We implement reasonable security measures to protect your information. However, no method of transmission over the Internet is 100% secure.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have questions about this Privacy Policy, contact us at <a href="tel:+1{{PHONE_DIGITS}}">{{PHONE_DISPLAY}}</a> or <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>.</p>
+  </article>
+  <footer class="footer">
+    <p>&copy; {{YEAR}} {{LLC_NAME}}. All rights reserved. | <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a></p>
+  </footer>
+  <script src="/global-modal.js" defer></script>
+</body>
+</html>

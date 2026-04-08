@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | {{BRAND_NAME}}</title>
+  <link rel="icon" href="/images/logos/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --navy: {{NAVY}}; --gold: {{GOLD}}; --off-white: {{OFF_WHITE}}; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Archivo', sans-serif; background: var(--navy); color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 24px; }
+    h1 { font-family: 'Archivo Black', sans-serif; font-size: 72px; color: var(--gold); margin-bottom: 8px; }
+    h2 { font-family: 'Archivo Black', sans-serif; font-size: 24px; text-transform: uppercase; margin-bottom: 16px; }
+    p { color: rgba(255,255,255,0.7); font-size: 16px; max-width: 420px; line-height: 1.6; margin-bottom: 24px; }
+    a.cta { display: inline-block; padding: 14px 32px; background: var(--gold); color: var(--navy); font-family: 'Archivo Black', sans-serif; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; border-radius: 4px; }
+    a.cta:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <h1>404</h1>
+  <h2>Page Not Found</h2>
+  <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+  <a class="cta" href="/">Back to Home</a>
+</body>
+</html>

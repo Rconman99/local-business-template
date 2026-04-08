@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | {{BRAND_NAME}}</title>
+  <meta name="description" content="Thank you for contacting {{BRAND_NAME}}. We'll be in touch shortly." />
+  <link rel="icon" href="/images/logos/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --navy: {{NAVY}}; --gold: {{GOLD}}; --off-white: {{OFF_WHITE}}; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Archivo', sans-serif; background: var(--off-white); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 24px; }
+    .checkmark { width: 64px; height: 64px; margin-bottom: 24px; }
+    h1 { font-family: 'Archivo Black', sans-serif; color: var(--navy); font-size: 32px; text-transform: uppercase; margin-bottom: 12px; }
+    p { color: #444; font-size: 18px; line-height: 1.6; max-width: 500px; margin-bottom: 8px; }
+    a.cta { display: inline-block; margin-top: 24px; padding: 14px 32px; background: var(--gold); color: var(--navy); font-family: 'Archivo Black', sans-serif; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <svg class="checkmark" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5">
+    <circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/>
+  </svg>
+  <h1>Thank You!</h1>
+  <p>We received your message and will call you within 15 minutes during business hours.</p>
+  <p>Need immediate help? Call <a href="tel:+1{{PHONE_DIGITS}}" style="color:var(--navy);font-weight:700">{{PHONE_DISPLAY}}</a></p>
+  <a class="cta" href="/">Back to Home</a>
+</body>
+</html>

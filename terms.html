@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | {{BRAND_NAME}}</title>
+  <meta name="description" content="Terms of Service for {{BRAND_NAME}}." />
+  <link rel="canonical" href="https://{{DOMAIN}}/terms" />
+  <link rel="icon" href="/images/logos/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --navy: {{NAVY}}; --gold: {{GOLD}}; --off-white: {{OFF_WHITE}}; --dark: #262626; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Archivo', sans-serif; color: var(--dark); background: var(--off-white); }
+    a { color: inherit; }
+    .inner-nav { background: var(--navy); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .inner-nav a { color: #fff; font-family: 'Archivo Black', sans-serif; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; }
+    .inner-nav .nav-cta { background: var(--gold); color: var(--navy); padding: 10px 20px; border-radius: 4px; font-size: 13px; }
+    .blog-hero { padding: 100px 24px 60px; background: var(--navy); text-align: center; }
+    .blog-hero h1 { font-family: 'Archivo Black', sans-serif; font-size: clamp(28px,5vw,42px); color: #fff; text-transform: uppercase; }    .blog-body { max-width: 800px; margin: -30px auto 60px; background: #fff; border-radius: 8px; padding: 48px 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+    .blog-body h2 { font-family: 'Archivo Black', sans-serif; font-size: 20px; color: var(--navy); text-transform: uppercase; margin: 28px 0 10px; }
+    .blog-body p, .blog-body li { font-size: 15px; line-height: 1.8; color: #444; margin-bottom: 12px; }
+    .blog-body ul { margin: 8px 0 16px 24px; }
+    .footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 40px 24px; text-align: center; font-size: 14px; }
+    .footer a { color: var(--gold); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav class="inner-nav">
+    <a href="/">{{BRAND_NAME}}</a>
+    <a href="/#heroForm" class="nav-cta">Free Estimate</a>
+  </nav>
+  <section class="blog-hero"><h1>Terms of Service</h1></section>
+  <article class="blog-body">
+    <p><strong>Effective Date:</strong> {{TERMS_DATE}}</p>
+    <p>These Terms of Service govern your use of the {{BRAND_NAME}} website at <a href="https://{{DOMAIN}}">{{DOMAIN}}</a>, operated by {{LLC_NAME}}.</p>
+
+    <h2>Use of Website</h2>
+    <p>This website is provided for informational purposes and to facilitate communication between you and {{BRAND_NAME}}. By using this site, you agree to these terms.</p>
+
+    <h2>SMS/Text Message Consent</h2>
+    <p>By submitting a contact form on this website, you expressly consent to receive SMS/text messages from {{BRAND_NAME}} at the phone number provided. You may opt out at any time by replying STOP. Message and data rates may apply. Message frequency varies.</p>
+    <h2>Disclaimer</h2>
+    <p>The information on this website is for general informational purposes only. {{BRAND_NAME}} makes no warranties about the completeness, reliability, or accuracy of this information. Any action you take based on the information on this website is at your own risk.</p>
+
+    <h2>Limitation of Liability</h2>
+    <p>{{LLC_NAME}} shall not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with the use of this website.</p>
+
+    <h2>Intellectual Property</h2>
+    <p>All content on this website, including text, images, logos, and design, is the property of {{LLC_NAME}} and is protected by applicable intellectual property laws.</p>
+
+    <h2>Contact Us</h2>
+    <p>Questions about these Terms? Contact us at <a href="tel:+1{{PHONE_DIGITS}}">{{PHONE_DISPLAY}}</a> or <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>.</p>
+  </article>
+  <footer class="footer">
+    <p>&copy; {{YEAR}} {{LLC_NAME}}. All rights reserved. | <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a></p>
+  </footer>
+  <script src="/global-modal.js" defer></script>
+</body>
+</html>
