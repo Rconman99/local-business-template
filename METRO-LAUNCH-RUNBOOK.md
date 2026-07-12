@@ -37,6 +37,8 @@ The tooling is ready; these business inputs are not, and nothing below can be fi
 
 ## Phase 5 — Audit each batch (Claude↔Codex)
 - [ ] Add the metro to `~/.config/frame-relay/projects.json` (see `templates/projects.example.json`); set the metro PII allowlist.
+- [ ] Record every skill/plugin used for the batch: local path, source root, validator/smoke command, and pass/fail result. Only use local/allowlisted skills or plugin skills surfaced in the active Codex/Claude session.
+- [ ] Before merge/handoff, run the relevant validator or smoke test for each skill that shaped the client work. Examples: `python3 ~/.agents/skills/build-gate/scripts/validate_build_gate.py`, `python3 ~/.agents/skills/local-seo-loop/scripts/validate_local_seo_loop.py`, or the plugin-specific smoke listed in its `SKILL.md`.
 - [ ] Per batch: `frame-relay --project frame-<metro> audit-with-codex` → trust-tier verdict before merge. No auto-merge; business-facts (NAP/legal) are `red-block`.
 
 ## Phase 6 — Gates + rollout (staggered)
@@ -50,6 +52,7 @@ The tooling is ready; these business inputs are not, and nothing below can be fi
 - No shared/duplicate GBP, virtual address, or name variant across metros (instant suspension).
 - No inherited slugs — every slug **re-derived** from `cities[]` (the Provo-leak lesson); geo-leakage gate enforces.
 - No city/service page publishes until build-gate returns only `green`/`yellow`; any `red-*` verdict blocks that page.
+- No skill/plugin-driven client work merges without a local allowlist source and a green validator/smoke result recorded in the handoff.
 
 ## State of the spine (2026-06-01)
 ✅ committed: `metro.config.json`+`nap.json` keystone (TX repo), `scaffold.mjs` (here), `frame-relay` v0.2.0 multi-project.
