@@ -32,7 +32,8 @@ The tooling is ready; these business inputs are not, and nothing below can be fi
 ## Phase 4 — Content (the real bottleneck — NO bulk drop)
 - [ ] Generate city×service clusters with the `location-page-factory` skill; offload bulk drafts to `local-llm-toolkit` (`ollama-client.py`, $0); **Claude/human polish**.
 - [ ] **Genuine local substance per city** (neighborhoods, landmarks, local storm/roof context) — not `{city}`-swap. Each page must clear the 30%-unique floor.
-- **Gate:** `audit-city-quality.mjs` (corpus) — 0 local-substance/differentiation reds.
+- [ ] Run the portable corpus gate before any publish: `python3 ~/.agents/skills/build-gate/scripts/build_gate.py "locations/*.html" --profile city --json`.
+- **Gate:** `audit-city-quality.mjs` (corpus) + `build_gate.py --profile city` — 0 local-substance/differentiation reds and no `red-copy`, `red-structural`, or `red-block` pages.
 
 ## Phase 5 — Audit each batch (Claude↔Codex)
 - [ ] Add the metro to `~/.config/frame-relay/projects.json` (see `templates/projects.example.json`); set the metro PII allowlist.
@@ -48,6 +49,7 @@ The tooling is ready; these business inputs are not, and nothing below can be fi
 - No `AggregateRating` without real, verifiable metro reviews (gate red-block + FTC risk).
 - No shared/duplicate GBP, virtual address, or name variant across metros (instant suspension).
 - No inherited slugs — every slug **re-derived** from `cities[]` (the Provo-leak lesson); geo-leakage gate enforces.
+- No city/service page publishes until build-gate returns only `green`/`yellow`; any `red-*` verdict blocks that page.
 
 ## State of the spine (2026-06-01)
 ✅ committed: `metro.config.json`+`nap.json` keystone (TX repo), `scaffold.mjs` (here), `frame-relay` v0.2.0 multi-project.

@@ -57,3 +57,4 @@ ratingValue regex drift-bug (only matches 4.9/5.0) — fix to a generic decimal.
 ## HARD GUARDRAILS (any one = a 2026 failure mode)
 No 40-page clone-drop (scaled-content-abuse). No AggregateRating without real reviews.
 No duplicate / virtual-address GBP. Re-derive every slug from `cities[]` (the Provo-leak class).
+No city/service page ships without `build_gate.py --profile city` returning only green/yellow verdicts.
